@@ -77,7 +77,7 @@ export default class Trend extends Vue {
     "2020-05-11",
     "2020-04-26"
 ];
-  private chart: boolean = false;
+  private chart: any = false;
 
   private o:any = {  
     chart: {
@@ -139,9 +139,16 @@ export default class Trend extends Vue {
         console.log("options", this.o)
 
         this.s[0].data = []
-        for (let k of Object.values(this.trendData)){
+        // let k: typeof Object.values(r.data.data)
+        console.log("THIS HAS TO BE CHANGED", Object.values(this.trendData))
+        let k:any;
+        for (k of Object.values(this.trendData)){
          this.s[0].data.push(k.total_cases);
         }
+
+        // Object.values(this.trendData).forEach( k => {
+        //   this.s[0].data.push(k.total_cases);
+        // })
         console.log("series", this.s);
 
       }).catch(function (error) {
@@ -174,7 +181,8 @@ export default class Trend extends Vue {
         console.log("options", this.o)
 
         this.s[0].data = []
-        for (let k of Object.values(this.trendData)){
+        let k:any;
+        for (k of Object.values(this.trendData)){
          this.s[0].data.push(k.total_cases);
         }
         console.log("series", this.s);
@@ -210,7 +218,8 @@ export default class Trend extends Vue {
         console.log("options", this.o)
 
         this.s[0].data = []
-        for (let k of Object.values(this.trendData)){
+        let k:any;
+        for (k of Object.values(this.trendData)){
          this.s[0].data.push(k.total_cases);
         }
         console.log("series", this.s);

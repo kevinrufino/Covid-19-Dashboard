@@ -71,7 +71,7 @@ export default class WorldStats extends Vue {
     totalCasesSort (): void {
       let d = new Date();
       let date = d.toISOString();
-      this.sortedData.sort((a, b)  => {
+      this.sortedData.sort((a:any, b:any)  => {
         if(a[1].total_cases < b[1].total_cases) {
           return 1;
         } else {
@@ -87,7 +87,7 @@ export default class WorldStats extends Vue {
     recoverySort (): void {
       let d = new Date();
       let date = d.toISOString();
-      this.sortedData.sort((a, b)  => {
+      this.sortedData.sort((a:any, b:any)  => {
         if(a[1].recovery_ratio > b[1].recovery_ratio) {
           return 1;
         } else {
