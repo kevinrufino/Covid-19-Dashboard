@@ -15,7 +15,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class Log extends Vue {
   readonly $appDB!: FirebaseFirestore;
-  private logs = [];
+  private logs:any = [];
 
   mounted () {
     this.$appDB

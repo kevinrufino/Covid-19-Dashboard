@@ -34,8 +34,8 @@ import axios from "axios";
 @Component
 export default class WorldStats extends Vue {
     readonly $appDB!: FirebaseFirestore;
-    private countryData = {};
-    private sortedData = [];
+    private countryData:any = {};
+    private sortedData:any = [];
     private class = "";
 
     mounted(): void {

@@ -47,10 +47,10 @@ import ApexChart from "vue-apexcharts";
 export default class Trend extends Vue {
   @Prop() private selectedCountry!: string;
   readonly $appDB!: FirebaseFirestore;
-  private trendData = {};
-  private x = [];
-  private y = [];
-  private z = [
+  private trendData: any = {};
+  private x:any = [];
+  private y:any = [];
+  private z:any = [
     "2021-04-12",
     "2021-03-28",
     "2021-03-14",
@@ -77,9 +77,9 @@ export default class Trend extends Vue {
     "2020-05-11",
     "2020-04-26"
 ];
-  private chart = false;
+  private chart: boolean = false;
 
-  private o = {  
+  private o:any = {  
     chart: {
       id: 'covid-dashboard'
     },
@@ -88,7 +88,7 @@ export default class Trend extends Vue {
     }
   }
 
-  private s = [{
+  private s:any = [{
     name: 'covid cases',
     data: this.y
   }]

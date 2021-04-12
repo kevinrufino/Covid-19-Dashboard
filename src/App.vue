@@ -37,9 +37,9 @@ import axios from "axios";
   },
 })
 export default class App extends Vue {
-    private countryData = {};
+    private countryData:any = {};
     // private selectedCountry = "";
-    private selectedCountry = "";
+    private selectedCountry:any = "";
 
     // clicked(): any {
     //   //when buttonclicked, send .name to trend as prop
